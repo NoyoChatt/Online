@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+</head>
+<body class="bodyColor">
+
+
+    <div style="margin-left: 5px; margin-bottom: 10px;" class="row">
+        <div class="col-md-12">
+            <label id="image_label" for = "" class = "form-label"><b>Your Image</b></label>
+            <input name = "image" type = "file" class = "form-control image" id = "image" accept = "image/*" onchange="previewImage()">
+        </div>
+        <div style="position: relative;">
+            <img src = "" alt = "" id = "image_dsp"> 
+        </div>
+    </div>
+<form id="myForm">
+    <h1 style="margin-left: 10px; margin-bottom: 10px;">ABOUT SECTION</h1>
+    <div style="margin-left: 10px; margin-bottom: 10px;" class="row">
+        <div class="col-md-12">
+            <label for="Fname">First Name:</label>
+            <input type="text" id="Fname" name="Fname" required>
+
+            <label for="Lname">Last Name:</label>
+            <input type="text" id="Lname" name="Lname" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+    </div>
+        
+    <div style="margin-left: 10px;" class="row">
+        <div class="col-md-12">
+            <label for="Phoneno">Phone no.:</label>
+            <input type="number" id="Phoneno" name="Phoneno" required>
+
+            <label for="Designation"> Designation:</label>
+            <input type="text" id="Designation" name="Designation" required>
+
+            <label for="Address"> Address:</label>
+            <input type="text" id="Address" name="Address" required>
+        </div>
+    </div> 
+
+     <h1 style="margin-left: 10px; margin-bottom: 10px;">EDUCATION</h1>
+     <h5 style="margin-left: 10px;">Matriculation</h5>
+     <div style="margin-left: 10px; margin-bottom: 10px;" class="row">
+        <div class="col-md-12">
+            <label for="School10">School name:</label>
+            <input type="text" id="School10" name="School10" required>
+
+            <label for="Board10">Board:</label>
+            <input type="text" id="Board10" name="Board10" required>
+
+            <label for="marks10">Marks:</label>
+            <input type="number" id="marks10" name="marks10" required>
+        </div>
+    </div>
+
+    <h5 style="margin-left: 10px; margin-bottom: 10px;">Intermediate</h5>    
+    <div style="margin-left: 10px;" class="row">
+        <div class="col-md-12">
+            <label for="School12">School name:</label>
+            <input type="text" id="School12" name="School12" required>
+
+            <label for="Board12">Board:</label>
+            <input type="text" id="Board12" name="Board12" required>
+
+            <label for="marks12">Marks:</label>
+            <input type="number" id="marks12" name="marks12" required>
+        </div>
+    </div>
+
+    <h5 style="margin-left: 10px; margin-bottom: 10px;">Graduation</h5>
+    <div style="margin-left: 5px; margin-bottom: 50px;" class="row">
+        <div class="col-md-12">
+            <label for="University">College name:</label>
+            <input type="text" id="University" name="University" required>
+
+            <label for="Degree">University name:</label>
+            <input type="text" id="Degree" name="Degree" required>
+
+            <label for="CGPA"> CGPA :</label>
+            <input type="number" id="CGPA" name="CGPA" required>
+        </div>
+    </div> 
+
+    <h1 style="margin-left: 10px; margin-bottom: 10px;">SKILLS</h1>
+    <div style="margin-left: 10px; margin-bottom: 50px;" class="column">
+            <label for="Skills">Skills:</label>
+            <textarea id="Skills" name="Skills" required>
+       </textarea>
+    </div>
+
+    <h1 style="margin-left: 10px; margin-bottom: 10px;">PROJECTS</h1>
+    
+    <div style="margin-left: 10px; margin-bottom: 50px;">
+        <button id="addButton" onclick="addRow()">Add Row</button>
+        <table id="dataTable">
+          <tr>
+            <th>Project Name</th>
+            <th>Project Link</th>
+            <th>Project Description</th>
+          </tr>
+          <tr>
+            <td><input type="text" name="PName[]" /></td>
+            <td><input type="email" name="Plink[]" /></td>
+            <td><input type="text" name="Description[]" /></td>
+          </tr>
+        </table>
+      </div>
+
+     <h1 style="margin-left: 10px; margin-bottom: 10px;">EXPERIENCE</h1>
+    <div style="margin-left: 10px; margin-bottom: 50px;">
+        <button id="addExpButton" onclick="addExpRow()">Add Row</button>
+        <table id="expDataTable">
+          <tr>
+            <th>Title</th>
+            <th>Company</th>
+            <th>Worked Till</th>
+          </tr>
+          <tr>
+            <td><input type="text" name="title[]" /></td>
+            <td><input type="text" name="comapny[]" /></td>
+            <td><input class="calendarPosition" type="date" id="dateInput" name="selectedDate[]" /></td>
+          </tr>
+        </table>
+      </div>
+   
+
+
+    <button style="margin-left: 10px; margin-bottom: 10px;" type="button" id="submitButton">Submit</button>
+  </form>
+  
+  <div class="col-md-6" id="output"></div>
+  <div class="col-md-6" id="education_output"></div>
+  <div class="col-md-6" id="skills_output"></div>
+  <div class="col-md-6" id="project_output"></div>
+  <div class="col-md-6" id="experience_output"></div>
+
+  <script src="https://kit.fontawesome.com/bf520e6492.js" crossorigin="anonymous"></script>
+  <script src="assets/js/samplejs.js"></script>
+</body>
+
+</html>

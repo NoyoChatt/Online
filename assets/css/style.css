@@ -1,0 +1,112 @@
+ @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); */
+
+ 
+ body {
+    background-color: #f4e1a9;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* padding: 0; */
+     
+}
+
+.bodyColor {
+    background-color: #f4e1a9;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* padding: 0; */
+}
+.container {
+    width: 500px;
+    margin: 0 auto;
+  }
+
+#image_dsp{
+    max-width: 300px;
+    max-height: 300px;
+    margin: 20px;
+    width: auto;
+    height: auto;
+}
+
+h1, h5 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+    width: 100%;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px 0;
+}
+
+.col-md-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    text-align: left;
+    width: 100%;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="date"]
+textarea {
+    background-color: #9e8e8c;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #f5f1ed; 
+    border-radius: 1px;
+}
+
+textarea {
+    resize: vertical;
+    
+}
+
+button {
+    padding: 10px;
+    width: 100%;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.calendarPosition {
+    margin-left: 30px;
+    margin-bottom: 10px;
+    color: #9e8e8c ;
+}
+
+th {
+    background-color: #dfd6d6;
+}
